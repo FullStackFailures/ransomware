@@ -1,0 +1,72 @@
+BoxLayout:
+    orientation: "vertical"
+    padding: "20dp"
+    spacing: "15dp"
+
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Label:
+        text: "⚠ CRITICAL SYSTEM BREACH DETECTED ⚠"
+        color: 1, 0, 0, 1
+        font_size: "30sp"
+        bold: True
+        size_hint_y: None
+        height: "60dp"
+
+    Label:
+        id: status
+        text: "Initializing..."
+        color: 0, 1, 0, 1
+        font_size: "20sp"
+
+    ScrollView:
+        id: scroll
+        do_scroll_x: False
+
+        Label:
+            id: log
+            text: ""
+            markup: True
+            color: 0, 1, 0, 1
+            font_size: "15sp"
+            text_size: self.width, None
+            size_hint_y: None
+            height: max(self.texture_size[1], self.parent.height)
+            valign: "top"
+            halign: "left"
+
+    ProgressBar:
+        id: progress
+        max: 100
+        value: 0
+        size_hint_y: None
+        height: "30dp"
+
+    Label:
+        id: percent
+        text: "0%"
+        color: 1, 1, 1, 1
+
+    BoxLayout:
+        id: password_box
+        orientation: "horizontal"
+        spacing: "10dp"
+        size_hint_y: None
+        height: "50dp"
+        opacity: 0
+        disabled: True
+
+        TextInput:
+            id: password
+            password: True
+            multiline: False
+            hint_text: "Enter password"
+
+        Button:
+            text: "UNLOCK"
+            on_release: app.check_password()
