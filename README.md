@@ -92,11 +92,23 @@ buildozer android clean
 buildozer android debug
 ```
 
-## Security / responsible use
+## ⚠️ Disclaimer
 
-Do not add persistence, privilege escalation, real file encryption, credential theft, evasion, destructive behavior, or unauthorized deployment to this project.
+This repository contains **ransomware-style software intended for cybersecurity education, research, demonstrations, and authorized security testing in controlled environments**.
 
-The repository operator and users are responsible for ensuring that any demonstration, modification, distribution, and testing is lawful and authorized.
+The original repository is maintained by **FullStackFailures**:
+
+https://github.com/FullStackFailures
+
+The authors and maintainers **do not endorse, encourage, or authorize** the use of this software for malicious, illegal, unauthorized, or harmful activities.
+
+By downloading, using, modifying, deploying, or distributing this repository, you acknowledge that **you are solely responsible for your actions and for complying with all applicable laws, regulations, organizational policies, and third-party terms of service**.
+
+The repository owner and contributors shall **not be held responsible for misuse, damage, data loss, unauthorized access, disruption, or any other consequences resulting from the use or modification of this software, to the extent permitted by applicable law**.
+
+Use this project only on systems, devices, networks, and data for which you have explicit authorization.
+
+**For educational and ethical hacking purposes only.**
 
 ## License
 
